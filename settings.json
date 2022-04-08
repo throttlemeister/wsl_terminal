@@ -1,19 +1,7 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "alwaysShowTabs": false,
-    "copyFormatting": "none",
-    "copyOnSelect": false,
-    "defaultProfile": "{af485b14-523a-59ee-a2b0-641311444903}",
-    "initialCols": 135,
-    "initialRows": 35,
-    // Add custom keybindings to this array.
-    // To unbind a key combination from your defaults.json, set the command to "unbound".
-    // To learn more about keybindings, visit https://aka.ms/terminal-keybindings
-    "keybindings": 
+    "actions": 
     [
-        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
-        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
-        // To learn more about selection, visit https://aka.ms/terminal-selection
         {
             "command": 
             {
@@ -23,19 +11,13 @@
             "keys": "ctrl+c"
         },
         {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        // Press Ctrl+Shift+F to open the search box
-        {
             "command": "find",
             "keys": "ctrl+shift+f"
         },
-        //{ "command": { "action": "openSettings", "target": "settingsUI" }, "keys": "ctrl+shift+," },
-        // Press Alt+Shift+D to open a new pane.
-        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
-        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
-        // To learn more about panes, visit https://aka.ms/terminal-panes
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
         {
             "command": 
             {
@@ -46,6 +28,12 @@
             "keys": "alt+shift+d"
         }
     ],
+    "alwaysShowTabs": false,
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{aa8efdb5-3cbe-50b2-a332-9203dc1ee217}",
+    "initialCols": 135,
+    "initialRows": 35,
     "profiles": 
     {
         "defaults": 
@@ -54,6 +42,28 @@
         },
         "list": 
         [
+            {
+                "acrylicOpacity": 0.75,
+                "backgroundImage": "D:\\Tools\\wsl_distro\\icons\\alma.png",
+                "backgroundImageAlignment": "right",
+                "backgroundImageOpacity": 0.25,
+                "backgroundImageStretchMode": "none",
+                "closeOnExit": "always",
+                "colorScheme": "SMYCK on Alma",
+                "commandline": "wsl.exe -d AlmaLinux -u throttlemeister",
+                "font": 
+                {
+                    "face": "Iosevka"
+                },
+                "guid": "{af485b14-523a-59ee-a2b0-641311444903}",
+                "hidden": false,
+                "icon": "D:\\Tools\\wsl_distro\\icons\\alma.png",
+                "name": "AlmaLinux",
+                "source": "Windows.Terminal.Wsl",
+                "tabColor": "#092335",
+                "tabTitle": "AlmaLinux (WSL2)",
+                "useAcrylic": true
+            },
             {
                 "acrylicOpacity": 0.75,
                 "backgroundImage": "file:///D:/Tools/wsl_distro/icons/rhel.png",
@@ -65,43 +75,51 @@
                 "commandline": "wsl.exe -d RHEL",
                 "cursorColor": "#FFFFFF",
                 "experimental.retroTerminalEffect": false,
-                "fontFace": "Iosevka",
-                "fontSize": 12,
+                "font": 
+                {
+                    "face": "Iosevka",
+                    "size": 12
+                },
                 "guid": "{5b602260-f9b9-54be-b63e-f9e95a89f141}",
+                "hidden": false,
                 "historySize": 9001,
                 "icon": "file:///D:/Tools/wsl_distro/icons/rhel.png",
+                "name": "RHEL",
                 "snapOnInput": true,
-                "startingDirectory": "//wsl$/RHEL/home/throttlemeister",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "%USERPROFILE%",
                 "tabColor": "#990002",
                 "tabTitle": "RHEL (WSL2)",
                 "useAcrylic": true
             },
             {
-                "acrylicOpacity": 0.75,
-                "backgroundImage": "D:\\Tools\\wsl_distro\\icons\\alma.png",
+                "acrylicOpacity": 0.5,
+                "backgroundImage": "D:\\Tools\\wsl_distro\\icons\\Devuan-logo.png",
                 "backgroundImageAlignment": "right",
                 "backgroundImageOpacity": 0.25,
                 "backgroundImageStretchMode": "none",
-                "closeOnExit": "always",
                 "colorScheme": "SMYCK",
-                "commandline": "wsl.exe -d AlmaLinux -u throttlemeister",
-                "fontFace": "Iosevka",
-                "guid": "{af485b14-523a-59ee-a2b0-641311444903}",
+                "commandline": "wsl.exe -d Devuan -u throttlemeister",
+                "font": 
+                {
+                    "face": "Iosevka"
+                },
+                "guid": "{7fd1043d-563c-50a7-8719-e7157ca0d572}",
                 "hidden": false,
-                "icon": "D:\\Tools\\wsl_distro\\icons\\alma.png",
-                "name": "AlmaLinux",
+                "icon": "D:\\Tools\\wsl_distro\\icons\\external-content.duckduckgo.png",
+                "name": "Devuan",
                 "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "\\\\wsl$\\AlmaLinux\\home\\throttlemeister",
-                "tabColor": "#092335",
-                "tabTitle": "AlmaLinux (WSL2)",
                 "useAcrylic": true
             },
             {
                 "acrylicOpacity": 0.69999999999999996,
                 "colorScheme": "Campbell Powershell",
                 "commandline": "powershell.exe",
-                "fontFace": "Cascadia Code",
-                "fontWeight": "light",
+                "font": 
+                {
+                    "face": "Cascadia Code",
+                    "weight": "light"
+                },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell",
@@ -113,38 +131,67 @@
                 "colorScheme": "Frost",
                 "commandline": "cmd.exe",
                 "cursorColor": "#000000",
-                "fontFace": "Cascadia Code",
-                "fontWeight": "light",
+                "font": 
+                {
+                    "face": "Cascadia Code",
+                    "weight": "light"
+                },
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt",
                 "useAcrylic": true
             },
             {
-                "acrylicOpacity": 0.75,
-                "backgroundImage": "file:///D:/Tools/wsl_distro/icons/Debian-icon.png",
+                "acrylicOpacity": 0.59999999999999998,
+                "backgroundImage": "D:\\Tools\\wsl_distro\\icons\\debianbw.png",
                 "backgroundImageAlignment": "right",
                 "backgroundImageOpacity": 0.25,
                 "backgroundImageStretchMode": "none",
                 "closeOnExit": "graceful",
-                "colorScheme": "Tango Dark",
+                "colorScheme": "SMYCK",
                 "commandline": "wsl.exe -d Debian",
                 "cursorColor": "#FFFFFF",
                 "experimental.retroTerminalEffect": false,
-                "fontFace": "Iosevka",
-                "fontSize": 12,
+                "font": 
+                {
+                    "face": "Iosevka",
+                    "size": 12
+                },
                 "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "hidden": false,
                 "historySize": 9001,
                 "icon": "file:///D:/Tools/wsl_distro/icons/Debian-icon.png",
+                "name": "Debian",
                 "padding": "0, 0, 0, 0",
                 "snapOnInput": true,
-                "startingDirectory": "//wsl$/Debian/home/throttlemeister",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": null,
                 "tabColor": "#24344D",
                 "tabTitle": "Debian (WSL2)",
                 "useAcrylic": true
             },
             {
-                "acrylicOpacity": 0.75,
+                "acrylicOpacity": 0.65000000000000002,
+                "backgroundImage": "D:\\Tools\\wsl_distro\\icons\\ubbwx.png",
+                "backgroundImageAlignment": "right",
+                "backgroundImageOpacity": 0.14999999999999999,
+                "backgroundImageStretchMode": "none",
+                "closeOnExit": "always",
+                "colorScheme": "Raspberry",
+                "cursorHeight": 20,
+                "font": 
+                {
+                    "face": "Iosevka"
+                },
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "icon": "D:\\Tools\\wsl_distro\\icons\\OS-Ubuntu-icon.png",
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl",
+                "useAcrylic": true
+            },
+            {
+                "acrylicOpacity": 0.65000000000000002,
                 "backgroundImage": "file:///D:/Tools/wsl_distro/icons/ubuntu.png",
                 "backgroundImageAlignment": "right",
                 "backgroundImageOpacity": 0.25,
@@ -153,19 +200,50 @@
                 "colorScheme": "Raspberry",
                 "commandline": "wsl.exe -d Ubuntu-20.04",
                 "cursorColor": "#FFFFFF",
-                "fontFace": "Iosevka",
-                "fontSize": 12,
+                "font": 
+                {
+                    "face": "Iosevka",
+                    "size": 12
+                },
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "hidden": false,
                 "historySize": 9001,
                 "icon": "file:///D:/Tools/wsl_distro/icons/OS-Ubuntu-icon.png",
-                "name": "Ubuntu",
+                "name": "Ubuntu LTS",
                 "padding": "0, 0, 0, 0",
                 "snapOnInput": true,
                 "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "//wsl$/Ubuntu/home/throttlemeister",
+                "startingDirectory": null,
                 "tabColor": "#995C00",
                 "tabTitle": "Ubuntu (WSL2)",
+                "useAcrylic": true
+            },
+            {
+                "acrylicOpacity": 0.75,
+                "backgroundImage": "file:///D:/Tools/wsl_distro/icons/centos.png",
+                "backgroundImageAlignment": "right",
+                "backgroundImageOpacity": 0.25,
+                "backgroundImageStretchMode": "none",
+                "closeOnExit": "graceful",
+                "colorScheme": "SMYCK",
+                "commandline": "wsl.exe -d CentOS",
+                "cursorColor": "#FFFFFF",
+                "experimental.retroTerminalEffect": false,
+                "font": 
+                {
+                    "face": "Iosevka",
+                    "size": 12
+                },
+                "guid": "{4d4cc780-cacb-5b6f-a183-29b5f6cdcd23}",
+                "hidden": false,
+                "historySize": 9001,
+                "icon": "file:///D:/Tools/wsl_distro/icons/centos-icon.png",
+                "name": "CentOS",
+                "padding": "0, 0, 0, 0",
+                "snapOnInput": true,
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": null,
+                "tabTitle": "CentOS (WSL2)",
                 "useAcrylic": true
             },
             {
@@ -185,8 +263,11 @@
                 "commandline": "wsl.exe -d Fedora",
                 "cursorColor": "#FFFFFF",
                 "experimental.retroTerminalEffect": false,
-                "fontFace": "Iosevka",
-                "fontSize": 12,
+                "font": 
+                {
+                    "face": "Iosevka",
+                    "size": 12
+                },
                 "guid": "{aa8efdb5-3cbe-50b2-a332-9203dc1ee217}",
                 "hidden": false,
                 "historySize": 9001,
@@ -194,31 +275,29 @@
                 "name": "Fedora",
                 "padding": "0, 0, 0, 0",
                 "snapOnInput": true,
-                "startingDirectory": "//wsl$/Fedora/home/throttlemeister",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": null,
                 "tabColor": "#355C97",
                 "tabTitle": "Fedora (WSL2)",
                 "useAcrylic": true
             },
             {
                 "acrylicOpacity": 0.75,
-                "backgroundImage": "file:///D:/Tools/wsl_distro/icons/centos.png",
+                "backgroundImage": "D:\\Tools\\wsl_distro\\icons\\rockylogo.png",
                 "backgroundImageAlignment": "right",
                 "backgroundImageOpacity": 0.25,
                 "backgroundImageStretchMode": "none",
-                "closeOnExit": "graceful",
-                "colorScheme": "SMYCK",
-                "commandline": "wsl.exe -d CentOS",
-                "cursorColor": "#FFFFFF",
-                "experimental.retroTerminalEffect": false,
-                "fontFace": "Iosevka",
-                "fontSize": 12,
-                "guid": "{4d4cc780-cacb-5b6f-a183-29b5f6cdcd23}",
-                "historySize": 9001,
-                "icon": "file:///D:/Tools/wsl_distro/icons/centos-icon.png",
-                "padding": "0, 0, 0, 0",
-                "snapOnInput": true,
-                "startingDirectory": "//wsl$/CentOS/home/throttlemeister",
-                "tabTitle": "CentOS (WSL2)",
+                "colorScheme": "SMYCK on Alma",
+                "commandline": "wsl.exe -d Rocky -u throttlemeister",
+                "font": 
+                {
+                    "face": "Iosevka"
+                },
+                "guid": "{4edc856f-af72-5cd2-9ad9-97e18d27846b}",
+                "hidden": false,
+                "icon": "D:\\Tools\\wsl_distro\\icons\\rockylogo.png",
+                "name": "Rocky",
+                "source": "Windows.Terminal.Wsl",
                 "useAcrylic": true
             },
             {
@@ -232,8 +311,11 @@
                 "commandline": "ssh throttlemeister@yggdrasil.sport-touring.eu",
                 "cursorColor": "#FFFFFF",
                 "experimental.retroTerminalEffect": false,
-                "fontFace": "Iosevka",
-                "fontSize": 12,
+                "font": 
+                {
+                    "face": "Iosevka",
+                    "size": 12
+                },
                 "historySize": 9001,
                 "icon": "file:///D:/Tools/wsl_distro/icons/sshicon.jpg",
                 "name": "Yggdrasil NAS",
@@ -243,56 +325,50 @@
                 "useAcrylic": true
             },
             {
-                "acrylicOpacity": 0.75,
-                "backgroundImage": "file:///D:/Tools/wsl_distro/icons/ubuntu.png",
-                "backgroundImageAlignment": "right",
-                "backgroundImageOpacity": 0.25,
-                "backgroundImageStretchMode": "none",
-                "closeOnExit": "graceful",
-                "colorScheme": "Raspberry",
-                "commandline": "wsl.exe -d Ubuntu-latest",
-                "cursorColor": "#FFFFFF",
-                "fontFace": "Iosevka",
-                "fontSize": 12,
-                "guid": "{2ada8b8c-5dd8-55b9-9c92-f510c9db7eeb}",
+                "acrylicOpacity": 0.5,
+                "backgroundImage": "D:\\Tools\\wsl_distro\\icons\\Images\\aperture.gif",
+                "backgroundImageAlignment": "center",
+                "backgroundImageOpacity": 0.5,
+                "backgroundImageStretchMode": "fill",
+                "closeOnExit": "always",
+                "colorScheme": "Aperture",
+                "cursorColor": "#A66900",
+                "cursorShape": "vintage",
+                "experimental.retroTerminalEffect": true,
                 "hidden": false,
-                "historySize": 9001,
-                "icon": "file:///D:/Tools/wsl_distro/icons/OS-Ubuntu-icon.png",
-                "name": "Ubuntu-Latest",
-                "padding": "0, 0, 0, 0",
-                "snapOnInput": true,
-                "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "//wsl$/Ubuntu-latest/home/throttlemeister",
-                "tabColor": "#995C00",
-                "tabTitle": "Ubuntu Latest (WSL2)",
-                "useAcrylic": true
-            },
-            {
-                "acrylicOpacity": 0.75,
-                "backgroundImage": "file:///D:/Tools/wsl_distro/icons/slackware.png",
-                "backgroundImageAlignment": "right",
-                "backgroundImageOpacity": 0.25,
-                "backgroundImageStretchMode": "none",
-                "closeOnExit": "graceful",
-                "colorScheme": "SMYCK",
-                "commandline": "wsl.exe -d Slackware -u throttlemeister",
-                "cursorColor": "#FFFFFF",
-                "experimental.retroTerminalEffect": false,
-                "fontFace": "Iosevka",
-                "fontSize": 12,
-                "guid": "{136fde7a-c427-5b47-a91d-e998f5a30e7e}",
-                "historySize": 9001,
-                "icon": "file:///D:/Tools/wsl_distro/icons/slackicon.png",
-                "padding": "0, 0, 0, 0",
-                "snapOnInput": true,
-                "startingDirectory": "//wsl$/Slackware/home/throttlemeister",
-                "tabTitle": "Slackware (WSL2)",
+                "icon": "D:\\Tools\\wsl_distro\\icons\\Images\\aperture_transparent.png",
+                "name": "Aperture",
+                "padding": "48",
+                "tabTitle": "Aperture Science",
                 "useAcrylic": true
             }
         ]
     },
     "schemes": 
     [
+        {
+            "background": "#6F3D00",
+            "black": "#A66900",
+            "blue": "#A66900",
+            "brightBlack": "#A66900",
+            "brightBlue": "#A66900",
+            "brightCyan": "#A66900",
+            "brightGreen": "#A66900",
+            "brightPurple": "#A66900",
+            "brightRed": "#A66900",
+            "brightWhite": "#A66900",
+            "brightYellow": "#A66900",
+            "cursorColor": "#A66900",
+            "cyan": "#A66900",
+            "foreground": "#A66900",
+            "green": "#A66900",
+            "name": "Aperture",
+            "purple": "#A66900",
+            "red": "#A66900",
+            "selectionBackground": "#A66900",
+            "white": "#A66900",
+            "yellow": "#A66900"
+        },
         {
             "background": "#191323",
             "black": "#17141F",
@@ -616,7 +692,7 @@
             "yellow": "#C18301"
         },
         {
-            "background": "#3C0315",
+            "background": "#29020E",
             "black": "#282A2E",
             "blue": "#0170C5",
             "brightBlack": "#676E7A",
@@ -655,6 +731,29 @@
             "foreground": "#F8F8F8",
             "green": "#8EB33B",
             "name": "SMYCK",
+            "purple": "#C8A0D1",
+            "red": "#C75646",
+            "selectionBackground": "#FFFFFF",
+            "white": "#B0B0B0",
+            "yellow": "#D0B03C"
+        },
+        {
+            "background": "#092335",
+            "black": "#000000",
+            "blue": "#4E90A7",
+            "brightBlack": "#5D5D5D",
+            "brightBlue": "#9CD9F0",
+            "brightCyan": "#77DFD8",
+            "brightGreen": "#CDEE69",
+            "brightPurple": "#FBB1F9",
+            "brightRed": "#E09690",
+            "brightWhite": "#F7F7F7",
+            "brightYellow": "#FFE377",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#218693",
+            "foreground": "#FAF5F5",
+            "green": "#8EB33B",
+            "name": "SMYCK on Alma",
             "purple": "#C8A0D1",
             "red": "#C75646",
             "selectionBackground": "#FFFFFF",
@@ -731,7 +830,7 @@
             "yellow": "#9D602A"
         },
         {
-            "background": "#000000",
+            "background": "#1E384D",
             "black": "#000000",
             "blue": "#3465A4",
             "brightBlack": "#555753",
